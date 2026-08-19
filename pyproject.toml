@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "offline-bili"
+version = "0.1.0"
+description = "A distraction-resistant offline Bilibili player"
+readme = "README.md"
+requires-python = ">=3.12,<3.15"
+license = "GPL-3.0-only"
+dependencies = [
+    "httpx==0.28.1",
+    "mpv==1.0.8",
+    "orjson==3.11.9",
+    "psutil==7.2.2",
+    "protobuf==7.35.1",
+    "PySide6==6.10.3",
+    "PySide6-Fluent-Widgets==1.11.3",
+    "qrcode==8.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pyinstaller>=6.16,<7",
+    "pytest>=8.3,<10",
+]
+
+[project.gui-scripts]
+offline-bili = "offline_bili.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

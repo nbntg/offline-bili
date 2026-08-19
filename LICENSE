@@ -1,0 +1,9 @@
+Offline Bili is licensed under the GNU General Public License, version 3 only.
+
+SPDX-License-Identifier: GPL-3.0-only
+
+The complete license text is available at:
+https://www.gnu.org/licenses/gpl-3.0.txt
+
+The vendored Bili23 Downloader source includes the complete GPL version 3 text
+in vendor/Bili23-Downloader/LICENSE.
